@@ -1,0 +1,36 @@
+{
+  "dataset": "S3DIS",
+  "seed": 20260620,
+  "num_points": 40960,
+  "cache_size": 2,
+  "implementation": {"eval_chunk_size": 8192, "activation_checkpoint_layers": 1},
+  "training": {
+    "epochs": 100,
+    "batch_size": 6,
+    "validation_batch_size": 20,
+    "steps_per_epoch": 500,
+    "validation_steps": 100,
+    "optimizer": "adamw",
+    "learning_rate": 0.01,
+    "weight_decay": 0.0001,
+    "schedule": "cosine",
+    "warmup_epochs": 5,
+    "min_learning_rate": 0.00001,
+    "class_weight_mode": "legacy",
+    "label_smoothing": 0.2,
+    "color_drop_prob": 0.2,
+    "auto_contrast_prob": 0.2,
+    "augment_xyz": false,
+    "noise_std": 0.35,
+    "exposure_prob": 0.0
+  },
+  "evaluation": {
+    "batch_size": 20,
+    "votes": 1,
+    "first_coverage": 0.5,
+    "coverage_step": 1.0,
+    "smooth": 0.95,
+    "max_patches": 1000000
+  }
+}
+

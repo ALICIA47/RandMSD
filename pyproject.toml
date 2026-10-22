@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "randmsd"
+version = "0.1.0"
+description = "RandMSD random-hierarchy point-cloud semantic segmentation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.0", "numpy>=1.24", "scipy>=1.10"]
+license = "MIT"
+license-files = ["LICENSE", "NOTICE.txt", "LICENSES/UPSTREAM-MIT.txt"]
+
+[project.scripts]
+randmsd-train = "randmsd.train:main"
+randmsd-evaluate = "randmsd.evaluate:main"
+randmsd-prepare = "randmsd.preprocess:main"
+randmsd-export = "randmsd.data.export:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

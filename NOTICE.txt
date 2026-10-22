@@ -1,0 +1,31 @@
+RandMSD source release candidate.
+
+Newly authored RandMSD code is provided under the MIT License; see LICENSE.
+This release also retains the upstream copyright and MIT permission notice
+identified below. The associated
+manuscript is not yet published; a formal paper citation will be added when
+available. Dataset and pretrained-weight access are separate from this source
+code license.
+
+Upstream attribution
+--------------------
+This model was separated from a RandLA-Net PyTorch research checkout. That
+checkout carries the MIT notice reproduced verbatim in
+LICENSES/UPSTREAM-MIT.txt, Copyright (c) 2020 qiqihaer. Retain that notice for
+copied or derived portions.
+
+The retained rsnative_corelite package contains the frozen reference backbone
+and its checkpoint-compatible optimization. Its internal name is retained so
+existing model-state keys and implementation provenance stay traceable; the
+public import is randmsd.
+
+The data and engine modules adapt the existing experiment's data conventions,
+weighted loss, schedules, and voting concepts into a compact independent
+workflow. Upstream algorithm references include RandLA-Net (Hu et al., CVPR
+2020) and SemanticKITTI (Behley et al., ICCV 2019). Dataset access, redistribution,
+and benchmark submission remain subject to their respective terms.
+
+Dependencies are installed separately, not vendored. Their own licenses apply.
+No dataset, checkpoint, server credential, third-party model source tree,
+unpublished experiment branch, or private log is bundled here.
+

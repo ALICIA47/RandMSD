@@ -1,0 +1,37 @@
+{
+  "dataset": "SemanticKITTI",
+  "seed": 20260620,
+  "num_points": 45056,
+  "cache_size": 2,
+  "implementation": {"eval_chunk_size": 8192, "activation_checkpoint_layers": 1},
+  "training": {
+    "epochs": 74,
+    "batch_size": 6,
+    "validation_batch_size": 20,
+    "steps_per_epoch": 3189,
+    "validation_steps": 204,
+    "optimizer": "adam",
+    "learning_rate": 0.01,
+    "weight_decay": 0.0,
+    "schedule": "exponential",
+    "lr_decay": 0.95,
+    "exponential_offset": 1,
+    "warmup_epochs": 0,
+    "class_weight_mode": "legacy",
+    "label_smoothing": 0.0,
+    "color_drop_prob": 0.0,
+    "auto_contrast_prob": 0.0,
+    "augment_xyz": false,
+    "noise_std": 0.0,
+    "exposure_prob": 0.0
+  },
+  "evaluation": {
+    "batch_size": 8,
+    "votes": 1,
+    "first_coverage": 0.5,
+    "coverage_step": 1.0,
+    "smooth": 0.95,
+    "max_patches": 1000000
+  }
+}
+
